@@ -1,0 +1,47 @@
+
+<html>
+
+<head>
+        
+</head>
+    <body>
+
+        <div id = 'result'></div>
+        <input id="text-input" type ='text'/>
+        <button  onclick= 'cmCon()'>convertToCm</button>
+        <button onclick = 'inCon()'>ConvertToIn</button>
+        
+
+        <script>
+         document.title = "Length Convertion"
+
+         function cmCon() {
+            let element = document.createElement('div');
+            let textInput = document.getElementById('text-input');
+             
+                element.innerHTML = textInput.value * 2.54 + "cm";
+                
+            let resultEl = document.getElementById('result');
+                resultEl.appendChild(element) 
+            document.body.appendChild(resultEl);  
+         }
+
+         function inCon() {
+            let element = document.createElement('div');
+            let textInput = document.getElementById('text-input');
+             
+                element.innerHTML = (textInput.value / 2.54).toFixed(2) + "in";
+                
+            let resultEl = document.getElementById('result');
+                resultEl.appendChild(element) 
+            document.body.appendChild(resultEl);  
+         }
+            
+
+
+            
+
+
+        </script>
+    </body>
+</html>

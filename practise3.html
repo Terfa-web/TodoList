@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <script>
+           // document.title = "Understanding Key Value Pairs";
+
+                let total = 0;
+            
+
+            function createCart(foodAndPrices) {
+                
+
+                 const foods = Object.keys(foodAndPrices);
+
+                 foods.forEach((food) => {
+                    const price = foodAndPrices[food];
+
+                    const  parentDiv = document.createElement('div')                   
+                 const addButton = document.createElement('button');
+                        addButton.innerText = 'Add';
+                        addButton.style = 'margin-left: 3px';
+                        addButton.onclick = function () {
+                            total = total + price;
+                        }
+                 const element = document.createElement('div')
+                 element.innerText =  food + " $" + price;
+                 element.appendChild(addButton);  
+               parentDiv.appendChild(element) ;
+               document.body.appendChild(parentDiv)
+            })
+          
+          
+        }   
+        createCart({Apple: 3,Orange: 4,Eggs: 2,Mango: 9})       
+        </script>
+
+        
+    </body>
+</html>

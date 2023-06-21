@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Filters and forEach Loops
+    </title>
+</head>
+
+<bod>
+
+    <script>
+
+
+
+
+function pickApples(fruits) {
+                let count = 0;
+
+            
+                function removApple(fruits) {
+
+                        fruits.forEach((fruit) => {
+                        if(fruit ==='apple') {
+                            return true;
+                        }
+                        });
+                        }
+                                    
+             fruits.filter(removApple); 
+            console.log(fruts)             
+            }
+
+
+        function max(numArray) {
+            let max = numArray[0]
+            numArray.forEach((num) => {
+                if(num > max) {
+                    max = num
+                }
+            })
+            console.log(max)
+        }
+        max([3,4,2,5,4,6,8])
+
+       
+           
+
+         
+        
+
+        pickApples(['cherry', 'apple', 'orange','apple', 'banana', 'apple'])
+    </script>
+</body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+
+    <script>
+        document.title = "Magic of Filters"
+        
+        function convertToUpper (str) {
+            return str.toUpperCase()
+        }
+
+        console.log(convertToUpper('communication'))
+
+//priactise with filters
+        function aboveFreezing(temps) {
+            function checkTempAboveWaterFreezingPoint(temps) {
+               return temps> 32; 
+            }
+
+           console.log(temps.filter(checkTempAboveWaterFreezingPoint));
+            
+        }
+
+//practise with filters 
+        function removeRed(foodArray) {
+            return foodArray.filter((food) => {
+                return food.color !== "red";
+            });          
+            
+        }
+
+        
+    </script>
+</body>
